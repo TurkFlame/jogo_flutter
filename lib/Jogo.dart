@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -42,5 +44,25 @@ class _JogoState extends State<Jogo> {
         this._mensagem = 'Você perdeu :(';
       });
     }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(title: Text('Jokenpo'), backgroundColor: Colors.blue,),
+        body: const Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                  padding: EdgeInsets.only(top: 24, bottom: 10),
+                  child: Text(
+                    'Escolha do App',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                    )
+                  ))
+            ]));
   }
 }
